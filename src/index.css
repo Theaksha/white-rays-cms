@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* White Rays Technologies Design System - Modern Tech Company Theme */
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 221 39% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 221 39% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 39% 11%;
+
+    --primary: 221 83% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 221 39% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 200 98% 53%;
+    --accent-foreground: 221 83% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 200 98% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom White Rays brand colors */
+    --brand-navy: 221 83% 10%;
+    --brand-cyan: 200 98% 53%;
+    --brand-purple: 260 100% 65%;
+    --brand-gradient: linear-gradient(135deg, hsl(var(--brand-cyan)) 0%, hsl(var(--brand-purple)) 100%);
+    --brand-gradient-subtle: linear-gradient(135deg, hsl(var(--brand-cyan) / 0.1) 0%, hsl(var(--brand-purple) / 0.1) 100%);
+    
+    /* Geometric shadows and effects */
+    --shadow-glow: 0 0 40px hsl(var(--brand-cyan) / 0.3);
+    --shadow-elegant: 0 20px 25px -5px hsl(var(--brand-navy) / 0.1), 0 10px 10px -5px hsl(var(--brand-navy) / 0.04);
+    
+    /* Animation variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 221 83% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 221 83% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 221 83% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 221 83% 10%;
+
+    --secondary: 221 50% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 221 50% 12%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 200 98% 53%;
+    --accent-foreground: 221 83% 10%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 221 50% 12%;
+    --input: 221 50% 12%;
+    --ring: 200 98% 53%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Geometric elements */
+  .geometric-bg {
+    background: var(--brand-gradient-subtle);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .geometric-bg::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 100%;
+    height: 200%;
+    background: var(--brand-gradient);
+    transform: rotate(15deg);
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slideInUp 0.6s ease-out;
+  }
+}
