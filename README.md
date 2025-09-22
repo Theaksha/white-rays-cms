@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# White Rays Technologies CMS
 
-## Project info
+A modern React-based Content Management System for White Rays Technologies website with Firebase backend.
 
-**URL**: https://lovable.dev/projects/4e2817af-a0ab-47c9-94c1-e453b0886b46
+## Features
 
-## How can I edit this code?
+- 🎨 Modern UI with Tailwind CSS and shadcn/ui
+- 🔥 Firebase integration for data persistence
+- 📱 Responsive design
+- ⚡ Fast development with Vite
+- 🛠️ Admin panel for content management
+- 🖼️ Logo upload functionality
+- 📝 Dynamic content editing
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4e2817af-a0ab-47c9-94c1-e453b0886b46) and start prompting.
+- Node.js & npm installed
+- Firebase project setup
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/Theaksha/white-rays-cms.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd white-rays-cms
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Setup environment variables
+cp .env.example .env
+# Add your Firebase config to .env
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Firebase Setup
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Create a Firebase project
+2. Enable Firestore Database
+3. Add your Firebase config to `.env` file
+4. Access admin panel at `/admin`
 
-**Use GitHub Codespaces**
+## Technologies Used
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
+- React 18
 - TypeScript
-- React
-- shadcn-ui
+- Vite
 - Tailwind CSS
+- shadcn/ui
+- Firebase
+- React Router
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/4e2817af-a0ab-47c9-94c1-e453b0886b46) and click on Share -> Publish.
+Build for production:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run build
+```
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Deploy to Vercel, Netlify, or any static hosting service.
